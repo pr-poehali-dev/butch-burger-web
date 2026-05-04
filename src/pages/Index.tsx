@@ -341,8 +341,8 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="space-y-10">
               {[
-                { icon: "MapPin", title: "Адрес", text: "ул. Гагарина, 42, 2-й этаж", sub: "Рядом с ТЦ «Центральный»" },
-                { icon: "Phone", title: "Телефон", text: "+7 (900) 000-00-00", sub: "Ежедневно в часы работы" },
+                { icon: "MapPin", title: "Адрес", text: "ул. Катерников, 7", sub: "Санкт-Петербург, 198328" },
+                { icon: "Phone", title: "Телефон", text: "8 (812) 988-44-24", sub: "Ежедневно в часы работы" },
                 { icon: "Clock", title: "Режим работы", text: "Пн–Чт 11:00–23:00", sub: "Пт–Вс 11:00–01:00" },
                 { icon: "Instagram", title: "Инстаграм", text: "@butchburger", sub: "Фото, акции, новинки" },
               ].map((c) => (
@@ -370,8 +370,8 @@ export default function Index() {
                 <div className="w-16 h-16 bg-brutal-red flex items-center justify-center mx-auto mb-4">
                   <Icon name="MapPin" size={32} fallback="MapPin" />
                 </div>
-                <div className="font-oswald text-white text-xl uppercase font-bold">ул. Гагарина, 42</div>
-                <div className="font-condensed text-white/40 text-sm mt-1">2-й этаж · Центр города</div>
+                <div className="font-oswald text-white text-xl uppercase font-bold">ул. Катерников, 7</div>
+                <div className="font-condensed text-white/40 text-sm mt-1">Санкт-Петербург · 198328</div>
               </div>
             </div>
           </div>
