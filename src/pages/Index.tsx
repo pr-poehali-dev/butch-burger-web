@@ -6,12 +6,17 @@ const INTERIOR_IMG = "https://cdn.poehali.dev/projects/8d66b3ea-5df4-40b5-afef-8
 const MENU_IMG = "https://cdn.poehali.dev/projects/8d66b3ea-5df4-40b5-afef-808845ecf260/files/eff19fd8-ed2a-4b40-b590-97d8a9d5c17e.jpg";
 
 const menuItems = [
-  { name: "BUTCH CLASSIC", desc: "Двойная котлета смэш, чеддер, маринованный лук, фирменный соус", price: "490 ₽", tag: "ХИТ" },
-  { name: "IRON BEAST", desc: "Говядина, бекон, яйцо, трюфельный майонез, горчица, томат", price: "590 ₽", tag: null },
-  { name: "DEATH BY CHEESE", desc: "Тройной чеддер, сырный соус, лук фри, горчица, смэш-котлета", price: "540 ₽", tag: "СЫРО" },
-  { name: "THE INFERNO", desc: "Халапеньо, сальса, авокадо, говядина, хрустящий лук", price: "560 ₽", tag: "ОГОНЬ" },
-  { name: "SMOKEHOUSE", desc: "Копчёная грудинка, BBQ соус, маринованные огурцы, чеддер", price: "580 ₽", tag: null },
-  { name: "DARK TRUFFLE", desc: "Трюфельный соус, грибы, дижонская горчица, двойная котлета", price: "650 ₽", tag: "ПРЕМИУМ" },
+  { name: "Острый Бургер", price: "450 ₽", tag: "БУРГЕРЫ" },
+  { name: "Много Сыра", price: "490 ₽", tag: "БУРГЕРЫ" },
+  { name: "Фишбургер", price: "170 ₽", tag: "БУРГЕРЫ" },
+  { name: "Мини Бык", price: "270 ₽", tag: "ЗАКУСКИ" },
+  { name: "Сырные палочки", price: "280 ₽", tag: "ЗАКУСКИ" },
+  { name: "Куриные Наггеты", price: "190 ₽", tag: "ЗАКУСКИ" },
+  { name: "Кесадилья с беконом", price: "260 ₽", tag: "ЗАКУСКИ" },
+  { name: "Кесадилья с курицей", price: "260 ₽", tag: "ЗАКУСКИ" },
+  { name: "Цезарь с курицей", price: "340 ₽", tag: "САЛАТЫ" },
+  { name: "Греческий Салат", price: "320 ₽", tag: "САЛАТЫ" },
+  { name: "Куриный Бульон", price: "150 ₽", tag: "СУПЫ" },
 ];
 
 const navLinks = [
@@ -146,39 +151,18 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
             {menuItems.map((item) => (
-              <div key={item.name} className="bg-brutal-dark p-8 group hover:bg-brutal-charcoal transition-colors">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-oswald text-2xl font-bold text-white group-hover:text-brutal-yellow transition-colors">
+              <div key={item.name} className="bg-brutal-dark p-6 group hover:bg-brutal-charcoal transition-colors flex items-center justify-between gap-4">
+                <div>
+                  <div className="font-condensed text-brutal-red text-xs uppercase tracking-widest mb-1">{item.tag}</div>
+                  <h3 className="font-oswald text-xl font-bold text-white group-hover:text-brutal-yellow transition-colors">
                     {item.name}
                   </h3>
-                  {item.tag && (
-                    <span className="font-condensed text-xs bg-brutal-red text-white px-2 py-0.5 uppercase tracking-wider flex-shrink-0 ml-3">
-                      {item.tag}
-                    </span>
-                  )}
                 </div>
-                <p className="font-roboto text-white/45 text-sm leading-relaxed mb-4">{item.desc}</p>
-                <div className="font-oswald text-2xl font-bold text-brutal-yellow">{item.price}</div>
+                <div className="font-oswald text-2xl font-bold text-brutal-yellow flex-shrink-0">{item.price}</div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-6 bg-brutal-charcoal border-l-4 border-brutal-red p-6">
-            <div className="flex flex-wrap gap-8">
-              {[
-                { name: "Картошка фри", price: "190 ₽" },
-                { name: "Луковые кольца", price: "220 ₽" },
-                { name: "Фирменный соус", price: "60 ₽" },
-                { name: "Напитки", price: "от 150 ₽" },
-              ].map((s) => (
-                <div key={s.name} className="flex items-center gap-3">
-                  <span className="font-condensed text-white/50 text-sm uppercase">{s.name}</span>
-                  <span className="font-oswald text-brutal-yellow font-bold">{s.price}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
