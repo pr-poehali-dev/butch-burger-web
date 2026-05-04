@@ -359,20 +359,15 @@ export default function Index() {
               ))}
             </div>
 
-            <div className="relative bg-brutal-ash h-[400px] flex items-center justify-center overflow-hidden">
-              <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.1) 39px, rgba(255,255,255,0.1) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.1) 39px, rgba(255,255,255,0.1) 40px)"
-                }}
+            <div className="relative h-[400px] overflow-hidden border border-white/10">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=30.211700%2C59.852600&z=16&pt=30.211700%2C59.852600%2Cpm2rdm&text=%D1%83%D0%BB.%20%D0%9A%D0%B0%D1%82%D0%B5%D1%80%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%2C%207%2C%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "grayscale(0.3) contrast(1.1)" }}
+                allowFullScreen
+                title="BUTCH BURGER на карте"
               />
-              <div className="text-center z-10">
-                <div className="w-16 h-16 bg-brutal-red flex items-center justify-center mx-auto mb-4">
-                  <Icon name="MapPin" size={32} fallback="MapPin" />
-                </div>
-                <div className="font-oswald text-white text-xl uppercase font-bold">ул. Катерников, 7</div>
-                <div className="font-condensed text-white/40 text-sm mt-1">Санкт-Петербург · 198328</div>
-              </div>
             </div>
           </div>
         </div>
